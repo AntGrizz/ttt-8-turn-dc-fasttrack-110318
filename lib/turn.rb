@@ -34,6 +34,8 @@ def input_to_index(user_input)
   user_input = user_input.to_i-1
 end
 
-def move(board, Index, "X")
-  Index = gets.strip
+def move(board, index, position = "X")
+ if valid_move?(board, index) == TRUE
+  board[index] = position
+end
 end
